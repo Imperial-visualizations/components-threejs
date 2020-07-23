@@ -1,8 +1,14 @@
-import Vue from 'vue'
-import App from './App.vue'
+import * as components from "./components"
 
-Vue.config.productionTip = false
-
-new Vue({
-  render: function (h) { return h(App) },
-}).$mount('#app')
+const ImpVisThree={
+  install(Vue){
+    for(const componentName in components){
+      const component = components[componentName];
+      Vue.component(component.name,component);
+    }
+  }
+}
+export default ImpVisThree;
+if(typeof window !== 'undefined' && window.Vue){
+  window.Vue.use(ImpVisThree);
+}
