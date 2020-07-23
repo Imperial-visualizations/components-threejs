@@ -2,6 +2,8 @@ import commonjs from "@rollup/plugin-commonjs";
 import resolve from "@rollup/plugin-node-resolve";
 import vue from "rollup-plugin-vue";
 import image from "@rollup/plugin-image";
+import includePaths from "rollup-plugin-includepaths";
+
 const external = [
     'vue',
     '@impvis/components'
