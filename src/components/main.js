@@ -1,5 +1,4 @@
-import * as components from "./"
-
+import * as components from "./components"
 const ImpVisThree={
   install(Vue){
     for(const componentName in components){
