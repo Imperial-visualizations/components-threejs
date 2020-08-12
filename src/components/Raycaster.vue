@@ -1,5 +1,5 @@
 <script>
-import * as THREE from "three";
+import {Raycaster,Vector2}from "three";
 
 export default {  
   name:'iv-raycaster',
@@ -7,8 +7,8 @@ export default {
   props: ['rendererId', 'camera', 'group'],
   data () {
       return {
-          raycaster: new THREE.Raycaster(),
-          mouse: new THREE.Vector2(),
+          raycaster: new Raycaster(),
+          mouse: new Vector2(),
           rendererWidth: null,
           rendererHeight: null,
           offsetLeft: null,

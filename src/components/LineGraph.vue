@@ -20,24 +20,25 @@
       </vgl-scene>
       <vgl-perspective-camera name="camera0" orbit-position="10 10 0"></vgl-perspective-camera>
       <orbit-controls camera="camera0" ></orbit-controls>
-      <raycaster rendererId="vgl-canvas" camera="camera0" group="rayParent" />
+      <iv-raycaster rendererId="vgl-canvas" camera="camera0" group="rayParent" />
     </vgl-renderer>
   </div>
 </template>
 
 <script>
-import * as THREE from "three";
+import {Vector3,Vector2,Raycaster} from "three";
 import OrbitControls from "./OrbitControls.vue";
-import Raycaster from "./Raycaster.vue";
+import IVRaycaster from "./Raycaster.vue";
+import {VglRenderer,VglMeshLambertMaterial,VglSphereGeometry,VglGeometry,VglLineBasicMaterial,VglScene,VglMesh,VglObject3d,VglPerspectiveCamera,VglLineSegments,VglDirectionalLight} from "vue-gl";
 
 export default {
   name: 'LineGraph',
   data () {
     return {
-      spherePos: new THREE.Vector3(0,0,0),
-      sphereVel: new THREE.Vector3(0.1,0.1,0.1),
-      raycaster: new THREE.Raycaster(),
-      mouse: new THREE.Vector2(),
+      spherePos: new Vector3(0,0,0),
+      sphereVel: new Vector3(0.1,0.1,0.1),
+      raycaster: new Raycaster(),
+      mouse: new Vector2(),
       intersects: [],
     }
   },
@@ -99,7 +100,18 @@ export default {
   },
   components: {
     OrbitControls,
-    Raycaster,
+    'iv-raycaster':IVRaycaster,
+    VglRenderer,
+    VglMeshLambertMaterial,
+    VglSphereGeometry,
+    VglGeometry,
+    VglLineBasicMaterial,
+    VglScene,
+    VglMesh,
+    VglObject3d,
+    VglPerspectiveCamera,
+    VglLineSegments,
+    VglDirectionalLight
   },
   mounted () {
     this.setup();
