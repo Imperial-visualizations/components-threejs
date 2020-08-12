@@ -2,6 +2,7 @@
   "name": "@impvis/threejscomponents",
   "version": "0.3.0",
   "main": "./dist/main.js",
+  "license": "BSD-3-Clause",
   "scripts": {
     "build": "rollup -c",
     "lint": "vue-cli-service lint"
