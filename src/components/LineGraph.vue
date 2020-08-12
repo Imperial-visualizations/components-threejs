@@ -32,7 +32,7 @@ import IVRaycaster from "./Raycaster.vue";
 import {VglRenderer,VglMeshLambertMaterial,VglSphereGeometry,VglGeometry,VglLineBasicMaterial,VglScene,VglMesh,VglObject3d,VglPerspectiveCamera,VglLineSegments,VglDirectionalLight} from "vue-gl";
 
 export default {
-  name: 'LineGraph',
+  name: 'iv-3d-line-graph',
   data () {
     return {
       spherePos: new Vector3(0,0,0),

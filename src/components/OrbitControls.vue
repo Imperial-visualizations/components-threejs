@@ -3,7 +3,7 @@ import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls';
 
 
 export default {
-  name:'OrbitControls',
+  name:'iv-orbit-controls',
   inject: ['vglNamespace'],
   props: ['camera'],
   computed: {
