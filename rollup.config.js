@@ -9,20 +9,30 @@ const external = [
     '@impvis/components',
     'three'
 ]
+const plugins = [
+    includePaths({paths: ["./"] }),
+    resolve(),
+    commonjs(),
+    image(),
+    terser(),
+    vue({css:true}) 
+]
 
-export default {
+export default [{
     input:'src/main.js',
     external:external,
     output:{
         format:"esm",
-        dir:'dist'
+        file:"./dist/impvis-components-threejs.ejs"
     },
-    plugins:[
-        includePaths({paths: ["./"] }),
-        resolve(),
-        commonjs(),
-        image(),
-        terser(),
-        vue({css:true})        
-    ]
-}
+    plugins:plugins
+},{
+    input:'src/main.js',
+    external:external,
+    output:{
+        name:"impvis-components-threejs",
+        format:"umd",
+        file:'./dist/impvis-components-threejs.umd.js'
+    },
+    plugins:plugins
+}]
