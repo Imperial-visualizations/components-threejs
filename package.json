@@ -1,6 +1,6 @@
 {
   "name": "@impvis/components-threejs",
-  "version": "0.3.4",
+  "version": "1.0.0",
   "main": "./dist/impvis-components-threejs.ejs",
   "unpkg": "./dist/impvis-components-threejs.umd.js",
   "license": "BSD-3-Clause",

@@ -23,7 +23,7 @@ export default [{
     external:external,
     output:{
         format:"esm",
-        file:"./dist/impvis-components-threejs.ejs"
+        file:"./dist/impvis-components-threejs.js"
     },
     plugins:plugins
 },{
